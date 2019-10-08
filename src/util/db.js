@@ -1,6 +1,6 @@
-const username = process.env.USERNAME || 'admin';
-const password = process.env.PASSWORD || '123';
-const localhost = process.env.HOST || 'localhost:27017/costdb';
+const username = process.env.USERNAMEDB || 'admin';
+const password = process.env.PASSWORDDB || '123';
+const localhost = process.env.HOSTDB || 'localhost:27017/costdb';
 
 
 module.exports = {
