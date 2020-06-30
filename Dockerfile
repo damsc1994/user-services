@@ -1,8 +1,9 @@
 FROM node
-RUN mkdir /usr/src/user-services
-WORKDIR /usr/src/user-services
-COPY package.json /usr/src/user-services
+ENV work_dir /usr/src/user-services
+RUN mkdir ${work_dir}
+WORKDIR ${work_dir}
+COPY package.json ${work_dir}
 RUN npm install
-COPY . /usr/src/user-services
+COPY . ${work_dir}
 EXPOSE 1801
 CMD [ "npm", "start" ]
